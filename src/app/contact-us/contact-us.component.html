@@ -1,0 +1,49 @@
+<form>
+  <h2>Welcome and post your query below</h2>
+
+  <div class="control">
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" />
+  </div>
+
+  <div>
+    <div class="control-row">
+      <div class="control">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" />
+      </div>
+
+      <div class="control">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" />
+      </div>
+    </div>
+  </div>
+  <div class="control">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="2" cols="75"></textarea>
+  </div>
+
+  <fieldset>
+    <legend>How did you find us?</legend>
+    <div class="control">
+      <input type="checkbox" id="google" name="acquisition" value="google" />
+      <label for="google">Google</label>
+    </div>
+
+    <div class="control">
+      <input type="checkbox" id="friend" name="acquisition" value="friend" />
+      <label for="friend">Referred by friend</label>
+    </div>
+
+    <div class="control">
+      <input type="checkbox" id="other" name="acquisition" value="other" />
+      <label for="other">Other</label>
+    </div>
+  </fieldset>
+
+  <p class="form-actions">
+    <button type="reset" class="button button-flat">Reset</button>
+    <button type="submit" class="button">Send</button>
+  </p>
+</form>

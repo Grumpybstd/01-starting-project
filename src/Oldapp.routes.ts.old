@@ -1,0 +1,47 @@
+import { Routes } from '@angular/router';
+import { TasksComponent } from './app/tasks/tasks.component';
+import { NoTaskComponent } from './app/tasks/no-task/no-task.component';
+import { UserTasksComponent } from './app/users/user-tasks/user-tasks.component';
+import { NewTaskComponent } from './app/tasks/new-task/new-task.component';
+import { NotFoundComponent } from './app/notFound/not-found.component';
+import { DisplayTextComponentComponent } from './app/display-text.component/display-text.component.component';
+import { VideoComponent } from './app/videos/video/video.component';
+import { KishWhoComponent } from './app/kish-who/kish-who.component';
+
+export const routes: Routes = [
+  {
+    path: '', //localhost:4200
+    component: NoTaskComponent,
+  },
+
+  {
+    path: 'users/:userId', //localhost:4200/users/<uiId>
+    component: UserTasksComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'tasks/new',
+        pathMatch: 'prefix', //prefix or full - prefix =
+      },
+      {
+        path: 'tasks', //domain/users/:userId/tasks
+        //component: TasksComponent,
+        component: TasksComponent,
+      },
+      {
+        path: 'tasks/new',
+        //component: NewTaskComponent,
+        component: NewTaskComponent,
+      },
+    ],
+  },
+  {
+    path: 'who-we-are',
+    component: KishWhoComponent,
+  },
+
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
+];

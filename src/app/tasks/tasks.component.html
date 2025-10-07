@@ -1,0 +1,20 @@
+{{ userId() }}
+<!-- routerLink="./" is special route syntax that links to page currently on or starts at the page currently on -->
+<!-- use property binding to pass an object as input  [queryParams]-->
+<p>
+  <a
+    routerLink="./"
+    [queryParams]="{ order: order() === 'asc' ? 'desc' : 'asc' }"
+  >
+    {{ order() === "asc" ? "Descending" : "Ascending" }}
+  </a>
+</p>
+<ul>
+  @for (task of userTasks(); track task.id) {
+  <li>
+    <app-task [task]="task" />
+  </li>
+  } @empty {
+  <p>There are no tasks yet. Start adding some!</p>
+  }
+</ul>
