@@ -10,6 +10,7 @@ video {
   width: 95%;
   height: 95%;
   left: 5rem;
+  opacity: 1.0;
 
   /* position: sticky;
   top: 62px;
@@ -35,6 +36,7 @@ video {
   flex-wrap: wrap;
   font-size: 30px;
   text-align: center;
+
 }
 
 .flex-item-left {
@@ -44,12 +46,12 @@ video {
   flex: 70%;
 }
 
-p {
+/* p {
   margin: 0;
   font-size: 0.8rem;
   text-wrap: pretty;
   color: #dd984e;
-}
+} */
 
 /* .vid { */
   /* width: 150px;

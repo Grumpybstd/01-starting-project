@@ -1,10 +1,12 @@
-<section id="tasks">
-  <header>
-    <h2>{{ userName() }} - Todo (User-Tasks Component)</h2>
-    <menu>
-      <a routerLink="tasks/new">Add Task</a>
-    </menu>
-  </header>
+<div class="flex-container-user">
+  <section id="tasks">
+    <header>
+      <h2>{{ userName() }} - Todo (User-Tasks Component)</h2>
+      <menu>
+        <a routerLink="tasks/new">Add Task</a>
+      </menu>
+    </header>
 
-  <router-outlet />
-</section>
+    <router-outlet />
+  </section>
+</div>

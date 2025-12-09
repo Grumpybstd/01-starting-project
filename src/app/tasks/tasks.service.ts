@@ -8,24 +8,29 @@ export class TasksService {
     {
       id: 't1',
       userId: 'u1',
-      title: 'Master Angular',
-      summary:
-        'Learn all the basic and advanced features of Angular & how to apply them.',
+      title: 'D1* Theory',
+      summary: 'Read DI 401 Rules and Recommendations.',
       dueDate: '2025-12-31',
     },
     {
       id: 't2',
-      userId: 'u3',
-      title: 'Build first prototype',
-      summary: 'Build a first prototype of the online shop website',
+      userId: 'u1',
+      title: 'D1* Programme',
+      summary: 'Source Mask Fins and Snorkel for the D1* Programme.',
       dueDate: '2024-05-31',
     },
     {
       id: 't3',
-      userId: 'u3',
-      title: 'Prepare issue template',
-      summary:
-        'Prepare and describe an issue template which will help with project management',
+      userId: 'u1',
+      title: 'D1* Pool Session',
+      summary: 'Attend the D* pool session to practice new skills.',
+      dueDate: '2024-06-15',
+    },
+    {
+      id: 't3',
+      userId: 'u1',
+      title: 'D1* Pool Session',
+      summary: 'Attend the D* pool session to practice new skills.',
       dueDate: '2024-06-15',
     },
   ]);

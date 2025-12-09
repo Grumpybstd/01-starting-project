@@ -1,11 +1,5 @@
 export const MENU_ITEMS = [
   {
-    id: 'u1',
-    name: 'Home',
-    route: 'home',
-    avatar: 'kish-house.svg',
-  },
-  {
     id: 'u2',
     name: 'Dive With Us ',
     route: 'dive-with-us',
@@ -13,7 +7,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'u3',
-    name: 'Kish-Who We Are',
+    name: 'Who We Are',
     route: 'who-we-are',
     avatar: 'kish-house.svg',
   },
@@ -35,12 +29,12 @@ export const MENU_ITEMS = [
     route: 'our-training',
     avatar: 'kish-house.svg',
   },
-  {
-    id: 'u7',
-    name: 'Archive',
-    route: 'archive',
-    avatar: 'kish-house.svg',
-  },
+  // {
+  //   id: 'u7',
+  //   name: 'Archive',
+  //   route: 'archive',
+  //   avatar: 'kish-house.svg',
+  // },
   {
     id: 'u8',
     name: 'Contact Us',
@@ -57,6 +51,12 @@ export const MENU_ITEMS = [
     id: 'u10',
     name: 'Committee Login',
     route: 'committeelogin',
+    avatar: 'kish-house.svg',
+  },
+  {
+    id: 'u1',
+    name: 'D1* Programme',
+    route: 'home',
     avatar: 'kish-house.svg',
   },
 ];

@@ -1,18 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   box-sizing: border-box;
+  
 }
 
-html {
-  height: 100%;
-}
+/* html {
+  height: 50%;
+} */
+
+
 
 body {
   font-family: "Poppins", sans-serif;
-  /* background: radial-gradient(circle at top left, #181023, #0b0519);
-  color: #c3b3d8; */
+  color: aqua;
+   /* background: radial-gradient(circle at top left, #181023, #0b0519);
+  color: #c3b3d8; 
+   margin: 0;
+  padding: 0; 
+  height: 100%; */
+ background-image: url("/schull-boat2.jpg");
+} 
+
+a {
+  color: #049bb3;
+  /* color:#09cdeb; */
+  background-color: #00282e;
+  text-decoration:none ;
+}
+a:hover,
+a:active,
+.selected {
+  background-color: #08424b;
+  color: #1ddbf8;
+}
+
+#tasks{
+  background-color: #033b43;
+  
+}
+h1 {
+  font-size: 25rem;
   margin: 0;
   padding: 0;
-  height: 100%;
+  color: #049bb3;
+  position: relative;
+  /* background-color: #524133; */
+opacity: 1.0;
 }
+
+h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  width: 60%;
+  text-wrap: balance;
+  color: #049bb3;
+}
+h3 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #049bb3;
+  position: relative;
+  /* background-color: #524133; */
+ 
+}
+
+menu a {
+  color: #049bb3;
+  background-color: #00282e;
+
+}
+p {
+  margin: 0;
+  font-size: 1rem;
+  text-wrap: balance;
+    color: #049bb3;
+    /* background-color: #524133; */
+
+  color: #049bb3;
+}
+
+
+
 

@@ -1,96 +1,57 @@
-header {
 
-  
+.flex-container {
+  max-width: 80%;
   display: flex;
-  flex-wrap: no-wrap;
   flex-direction: row; 
   align-items: center;
-  gap: 5rem;
-  width: 85%;
-  max-width: 150rem;
-  max-height: 10rem;
-  margin: 0 auto 0rem auto;
-  text-align: center;
-  /* background-image: url("/turtle1.mp4"); */
-  background-color: #524133; 
-  /* background: linear-gradient(
-    to bottom,
-    #2c0a4c,
-    #450d80
-  );    */
-  margin-top: 3rem;
-  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content:space-around;
+  background-color: #00282e; 
+  /* background-color: rgba(0, 35, 68, 0.984); */
+
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0.5rem;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-}
-
-img {
-  width: 10rem;
-  height: 10rem;
-  object-fit: contain;
-  position: relative;
-}
-#kish {
-  width: 10rem;
-  height: 10rem;
-  object-fit: contain;
-  position: relative;
-
-}
-#kishLogo {
-  width: 10rem;
-  height: 10rem;
-  position: relative;
-  left: 0rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); 
   
-  border-top-right-radius: 100px;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border-bottom-left-radius: 100px;
 }
-
-h1 {
-  
-  margin: 0;
-  padding: 0;
-  color: #f17406;
+.flex-item1 {
+  height: 105px;
+  width:185px;
+  background-color: #00282e; 
+  align-content: center;
+ 
+}
+.flex-item2 {
+  height: 105px;
+  width:515px;
+   background-color: #00282e; 
   position: relative;
-  left: 300px;
-
+  align-content: center;
+  text-align: center;
+  /* padding:1rem; */
 }
-
-
-video {
-  border: 2px solid #dd984e;
+.flex-item3 {
+  height: 105px;
+  width:184px;
+  background: rgb(108, 92, 106);
+  position: relative;
+  border: 2px solid #140b02;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 50px; 
   overflow: hidden;
-  position: sticky;
-  top: 62px;
-  right:0px;
-  left: 1500px;
-  z-index: 5;
 }
-.vid {
-  /* width: 150px;
-  height: 150px; */
-  border: 2px solid red;
-  border-radius: 100px 100px 100px 100px;
-  position: relative;
-  top: 0px;
-  right:0px;
-  left: 400px;
-  z-index: 5;
-  /* border-top-right-radius: 100px;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border-bottom-left-radius: 100px; */
-}
+
+ img {
+    width: 55%;
+  }
 
 p {
   margin: 0;
@@ -98,22 +59,70 @@ p {
   text-wrap: balance;
 
 }
-
-@media (min-width: 768px) {
-  header {
-    padding: 2rem;
+h1 {
+    text-align: center;
+    /* color: #dd984e; */
+    /* color:#156e7c; */
+    color:#049bb3;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
   }
 
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+
+  }
+  .flex-item1 {
+  height: 50px;
+  width:92px;
+  background-color: #524133;
+ 
+  align-content: center;
+ 
+}
   img {
-    width: 4.5rem;
+    width: 3.5rem;
+    align-content:center ;
   }
 
   h1 {
+    
     font-size: 1.5rem;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
   }
 }
+
+
+#vid {
+  height: 100%;
+  width: 100%;
+
+}
+/* 
+#kishLogo {
+ height: 100px;
+  width:200px;
+  border: 2px solid #140b02;
+  background-color: #2a26a9;
+  /* border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px; */
+/* }
+
+ .clubName {
+  height: 33%;
+  width:33%;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #140b02;
+  background:#9a99b7
+}  */
 
 /* .web-cam { 
   width: 250px;
@@ -128,4 +137,39 @@ video {
   position: absolute;
   top: -125px;
   left: -125px;
+} */
+
+/* headerOld {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: row; 
+  justify-content: flex-start;
+  gap: 5rem;
+  max-width: 150rem;
+
+  margin: 0 auto 0rem auto;
+  text-align: center;
+  background-image: url("/turtle1.mp4"); */
+  /* background-color: #524133;  */
+  /* background: linear-gradient(
+    to bottom,
+    #2c0a4c,
+    #450d80
+  );   
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+} */
+ 
+
+/* #kish {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  position: relative;
+
 } */

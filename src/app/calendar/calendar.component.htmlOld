@@ -1,0 +1,32 @@
+<div class="p-4 space-y-6">
+  <!-- Input section -->
+  <div class="flex flex-col sm:flex-row gap-4 items-center">
+    <mat-form-field appearance="fill" class="w-60">
+      <mat-label>Select date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="w-72">
+      <mat-label>Event title</mat-label>
+      <input
+        matInput
+        placeholder="e.g. Project meeting"
+        [(ngModel)]="eventTitle"
+      />
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="addEvent()"
+      [disabled]="!selectedDate || !eventTitle"
+    >
+      Add Event
+    </button>
+  </div>
+
+  <!-- Calendar -->
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>

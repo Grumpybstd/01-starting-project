@@ -1,7 +1,9 @@
-<ul id="users">
-  @for (user of users; track user.id) {
-  <li>
-    <app-user [user]="user" />
-  </li>
-  }
-</ul>
+<div class="flex-cotainer-users">
+  <ul id="users">
+    @for (user of users; track user.id) {
+    <li>
+      <app-user [user]="user" />
+    </li>
+    }
+  </ul>
+</div>

@@ -1,7 +1,9 @@
-<ul id="users">
-  @for (user of menu; track user.id) {
-  <li>
-    <app-menu-item [user]="user" />
-  </li>
-  }
-</ul>
+<div class="container-menu">
+  <ul id="menuItems">
+    @for (user of menu; track user.id) {
+    <li>
+      <app-menu-item [user]="user" />
+    </li>
+    }
+  </ul>
+</div>

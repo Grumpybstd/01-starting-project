@@ -1,4 +1,4 @@
-p {
+/* p {
   margin: 0;
   font-size: 1rem;
   text-wrap: balance;
@@ -23,7 +23,7 @@ h3 {
   position: relative;
   background-color: #524133;
 opacity: 1.0;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -53,21 +53,21 @@ header img {
   filter: drop-shadow(0 0 4px rgba(31, 42, 42, 0.5));
 }
 
-header h1 {
+/* header h1 {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size: 3rem;
   margin: 1rem 0;
   letter-spacing: 0.2rem;
   color: #524133;;
-}
+} */
 
 form {
   width: 90%;
   max-width: 40rem;
   margin: 3rem auto;
   padding: 2rem;
-  background: linear-gradient(180deg, #524133, #524133);
+  background: linear-gradient(180deg, #00282e, #00282e);
   border-radius: 8px;
   box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
 }
@@ -85,7 +85,7 @@ fieldset {
   display: block;
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
-  color: #aa886c;;
+  color: #049bb3;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -110,7 +110,7 @@ textarea {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #758a8a;
-  background-color: #94765d;
+  background-color: #e4e9bd;
   color: #142020;
 }
 
@@ -143,7 +143,7 @@ textarea {
   border-radius: 0;
   border: none;
   background-color: transparent;
-  color: #d9e2f1;
+  color: #f1e2d9;
 }
 
 .control-error {
@@ -189,8 +189,8 @@ hr {
   font-size: 1rem;
   border-radius: 4px;
   border: none;
-  background-color: #977960;
-  color: #ae8b6e;
+  background-color: #034c58;
+  color: #049bb3;
   cursor: pointer;
 }
 

@@ -2,8 +2,8 @@ p {
   margin: 0;
   font-size: 1rem;
   text-wrap: balance;
-    color:  #dd984e;
-    background-color: #524133;
+    color: #049bb3;
+    /* background-color: #524133; */
     opacity: 1.0;
     
 }
@@ -11,7 +11,7 @@ h1 {
   font-size: 25rem;
   margin: 0;
   padding: 0;
-  color: #dd984e;
+  color: #049bb3;
   position: relative;
   background-color: #524133;
 opacity: 1.0;
@@ -20,7 +20,7 @@ h3 {
   font-size: 1rem;
   margin: 0;
   padding: 0;
-  color: #dd984e;
+  color: #049bb3;
   position: relative;
   background-color: #524133;
 opacity: 1.0;
