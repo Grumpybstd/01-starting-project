@@ -1,8 +1,8 @@
 <div class="container-menu">
   <ul id="menuItems">
-    @for (user of menu; track user.id) {
+    @for (menuItem of menu; track menuItem.id) {
     <li>
-      <app-menu-item [user]="user" />
+      <app-menu-item [user]="menuItem" />
     </li>
     }
   </ul>

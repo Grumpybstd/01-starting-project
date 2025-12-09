@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -30,5 +31,6 @@ export const appConfig: ApplicationConfig = {
       MatInputModule,
       MatNativeDateModule
     ),
+    provideHttpClient(),
   ],
 };

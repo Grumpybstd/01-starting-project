@@ -1,12 +1,39 @@
 <div class="flex-container-user">
   <section id="tasks">
     <header>
-      <h2>{{ userName() }} - Todo (User-Tasks Component)</h2>
-      <menu>
-        <a routerLink="tasks/new">Add Task</a>
+      <menu class="">
+        <ul>
+          @for (item of menuItems().submenu; track $index) {
+          <li>
+            <a [routerLink]="[item.subMenuRoute]">{{ item.subMenuName }}</a>
+          </li>
+          }
+        </ul>
       </menu>
     </header>
-
     <router-outlet />
   </section>
 </div>
+
+<!-- <a
+  [routerLink]="['/users', user().id, user().route]"
+  routerLinkActive="selected"
+>
+  <img [src]="imagePath()" [alt]="user().name" />
+  <span>{{ user().name }}</span>
+</a> -->
+
+<!-- <menu>
+        <a routerLink="kish-photos">Kish Photo Album</a>
+        <a routerLink="gallery">Kish Video Album</a>
+</menu> -->
+
+<!-- <div class="container-menu">
+  <ul id="menuItems">
+    @for (menuItem of menu; track menuItem.id) {
+    <li>
+      <app-menu-item [user]="menuItem" />
+    </li>
+    }
+  </ul>
+</div> -->

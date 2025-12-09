@@ -46,7 +46,7 @@ export const DUMMY_USERS = [
   },
   {
     id: 'u10',
-    name: 'Member Login',
+    name: 'Member Area',
     avatar: 'kish-house.svg',
   },
 ];

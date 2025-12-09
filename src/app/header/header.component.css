@@ -1,6 +1,6 @@
 
 .flex-container {
-  max-width: 80%;
+  max-width: 90%;
   display: flex;
   flex-direction: row; 
   align-items: center;
@@ -11,7 +11,7 @@
   /* background-color: rgba(0, 35, 68, 0.984); */
 
   margin: 0 auto;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   padding: 0.5rem;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
@@ -30,35 +30,42 @@
 .flex-item2 {
   height: 105px;
   width:515px;
-   background-color: #00282e; 
+  background-color: #00282e; 
   position: relative;
   align-content: center;
   text-align: center;
   /* padding:1rem; */
 }
 .flex-item3 {
-  height: 105px;
-  width:184px;
-  background: rgb(108, 92, 106);
+  height: 90px;
+  width:150px;
+  background: #00282e;
   position: relative;
-  border: 2px solid #140b02;
+  /* border: 2px solid #140b02; */
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px; 
   overflow: hidden;
 }
-
+video {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+   position: absolute;
+  top: 0;
+  left: 0; 
+} 
  img {
     width: 55%;
   }
 
-p {
+/* p {
   margin: 0;
   font-size: 0.8rem;
   text-wrap: balance;
 
-}
+} */
 h1 {
     text-align: center;
     /* color: #dd984e; */
@@ -69,19 +76,49 @@ h1 {
     padding: 0;
     font-family: Tahoma, sans-serif;
   }
+  /* #vid {
+  height: 100%;
+  width: 100%;
+  
+  } */
+
 
 @media (max-width: 768px) {
   header {
-    padding: 1rem;
+    padding: 0rem;
 
   }
+  .flex-container {
+  flex-direction: row; 
+  max-width: 100%;
+  }
   .flex-item1 {
-  height: 50px;
-  width:92px;
-  background-color: #524133;
- 
+  height: 55px;
+  width:55px;
+  background-color: #00282e;
   align-content: center;
- 
+}
+.flex-item2 {
+  height: 55px;
+  width:225px;
+  background-color: #00282e; 
+  position: relative;
+  align-content: center;
+  text-align: center;
+  
+  /* padding:1rem; */
+}
+.flex-item3 {
+  height: 45px;
+  width:90px;
+  background: #00282e;
+  position: relative;
+  /* border: 2px solid #140b02; */
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px; 
+  overflow: hidden;
 }
   img {
     width: 3.5rem;
@@ -89,19 +126,20 @@ h1 {
   }
 
   h1 {
-    
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0;
-    padding: 2rem;
+    padding: 0rem;
   }
+  video {
+  width: 100px;
+  height: 50px;
+  object-fit: cover;
+   position: absolute;
+  top: 0;
+  left: 0; 
+} 
 }
 
-
-#vid {
-  height: 100%;
-  width: 100%;
-
-}
 /* 
 #kishLogo {
  height: 100px;

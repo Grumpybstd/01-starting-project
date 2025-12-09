@@ -14,54 +14,97 @@
 .container-menu {
   /* display: grid;
   grid-auto-flow: row; */
-  max-width: 68%;
+  /* max-width: 80%; */
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   flex-wrap:wrap;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: -1rem;
-  padding: 0;
+  padding: 0 auto;
   /* gap: 5rem; */
+   /* margin-top: 1rem; */
+  /* margin-right: auto; */
+  /* margin-bottom: 0rem; */
+  /* margin-left: auto; */
 }
 
-/* .flex-item {
-  
-} */
 
 ul {
   list-style: none;
-  margin: 0.5rem auto;
-  padding: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
-  overflow: auto;
+  justify-content: center;
+  /* justify-items: center; */
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  overflow:auto;
+  margin: 5px;
+  padding:0;
 }
 
-#menuItems {
+/* #menuItems {
   list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex; 
+  width: 100%; */
+  /* margin: 0;
+  padding: 0; */
+  /* display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: row;
+  gap: .25rem;
+  overflow: auto;
+  position: relative;
+
+} */
+
+@media (max-width: 768px) {
+  
+  .container-menu {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items:center;
+  flex-wrap:wrap;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  /* margin: 0 auto; */
+  /* margin-top: 1rem;
+  margin-right: auto; */
+  /* margin-bottom: 0rem; */
+  /* margin-left: auto; */
+  /* padding: 0; */
+  /* gap: 5rem; */
+}
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* #menuItems {
+  list-style: none;
+  width: 45%;
+  */
+  /* margin: 0;
+  padding: 0; */
+  /* display: flex; 
+  justify-content: center;
   flex-wrap: wrap;
   flex: row;
   gap: .25rem;
   /* overflow: auto;
   position: relative; */
-  left: 0rem;
+  /* left: 0rem;  */
 }
+  
 
-@media (max-width: 768px) {
-  main {
-    margin: 4rem auto;
-    grid-template-columns: 1fr 3fr;
-  }
-
-  #users {
+  /* #users {
     flex-direction: column;
-  }
-} 
+  } */
+ 
 
 /* @media (min-width: 768px) {
   ul {

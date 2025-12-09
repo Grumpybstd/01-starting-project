@@ -12,37 +12,45 @@ import { ContactUsComponent } from './app/contact-us/contact-us.component';
 import { MemberLoginComponent } from './app/member-login/member-login.component';
 import { CommitteeLoginComponent } from './app/committee-login/committee-login.component';
 import { CalendarComponent } from './app/calendar/calendar.component';
+import { LandingComponent } from './app/landing/landing.component';
+import { GalleryComponent } from './app/gallery/gallery.component';
+import { DivewithusComponent } from './app/divewithus/divewithus.component';
+import { KishphotosComponent } from './app/kishphotos/kishphotos.component';
+import { WeatherComponent } from './app/weather/weather.component';
+import { MemberComponent } from './app/member/member.component';
+import { MeteireannComponent } from './meteireann/meteireann.component';
+import { SlackcalcComponent } from './slackcalc/slackcalc.component';
 
 export const routes: Routes = [
   {
     path: '', //localhost:4200
-    component: NoTaskComponent,
+    component: LandingComponent,
   },
   {
     path: 'users/:userId/home', //localhost:4200/users/<uiId>
-    component: UserTasksComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'prefix', //prefix or full - prefix =
-      },
-      {
-        path: 'home',
-        component: TasksComponent,
-      },
+    component: LandingComponent,
+    // children: [
+    //   {
+    //     path: '',
+    //     redirectTo: 'home',
+    //     pathMatch: 'prefix', //prefix or full - prefix =
+    //   },
+    //   {
+    //     path: 'home',
+    //     component: LandingComponent,
+    //   },
 
-      {
-        path: 'tasks', //domain/users/:userId/tasks
-        //component: TasksComponent,
-        component: TasksComponent,
-      },
-      {
-        path: 'tasks/new',
-        //component: NewTaskComponent,
-        component: NewTaskComponent,
-      },
-    ],
+    //   {
+    //     // path: 'tasks', //domain/users/:userId/tasks
+    //     //component: TasksComponent,
+    //     // component: TasksComponent,
+    //   },
+    //   {
+    //     // path: 'tasks/new',
+    //     //component: NewTaskComponent,
+    //     // component: NewTaskComponent,
+    //   },
+    // ],
   },
 
   {
@@ -56,6 +64,18 @@ export const routes: Routes = [
       },
       {
         path: 'dive-with-us',
+        component: DivewithusComponent,
+      },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
+      {
+        path: 'who-we-are',
         component: KishWhoComponent,
       },
     ],
@@ -73,6 +93,14 @@ export const routes: Routes = [
         path: 'who-we-are',
         component: KishWhoComponent,
       },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
     ],
   },
 
@@ -87,7 +115,15 @@ export const routes: Routes = [
       },
       {
         path: 'gallery',
-        component: VideoComponent,
+        component: GalleryComponent,
+      },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'our-training',
+        component: KishTrainingComponent,
       },
     ],
   },
@@ -105,6 +141,14 @@ export const routes: Routes = [
         path: 'calendar',
         component: CalendarComponent,
       },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
     ],
   },
   {
@@ -119,6 +163,14 @@ export const routes: Routes = [
       {
         path: 'our-training',
         component: KishTrainingComponent,
+      },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
       },
     ],
   },
@@ -150,6 +202,14 @@ export const routes: Routes = [
         path: 'contact-us',
         component: ContactUsComponent,
       },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
     ],
   },
   {
@@ -164,6 +224,22 @@ export const routes: Routes = [
       {
         path: 'login',
         component: MemberLoginComponent,
+      },
+      {
+        path: 'member',
+        component: MemberComponent,
+      },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
+      {
+        path: 'our-training',
+        component: KishphotosComponent,
       },
     ],
   },
@@ -180,9 +256,67 @@ export const routes: Routes = [
         path: 'login',
         component: CommitteeLoginComponent,
       },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
     ],
   },
-
+  {
+    path: 'users/:userId/weather',
+    component: UserTasksComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'weather',
+        pathMatch: 'prefix', //prefix or full - prefix =
+      },
+      {
+        path: 'weather',
+        component: WeatherComponent,
+      },
+      {
+        path: 'metEireann',
+        component: MeteireannComponent,
+      },
+      {
+        path: 'windy',
+        redirectTo: 'weather',
+        pathMatch: 'prefix',
+      },
+      {
+        path: 'slackcalc',
+        component: SlackcalcComponent,
+      },
+    ],
+  },
+  {
+    path: 'users/:userId/memberlogin',
+    component: UserTasksComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'member',
+        pathMatch: 'prefix', //prefix or full - prefix =
+      },
+      {
+        path: 'member',
+        component: MemberComponent,
+      },
+      {
+        path: 'kish-photos',
+        component: KishphotosComponent,
+      },
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
+    ],
+  },
   {
     path: '**',
     component: NotFoundComponent,

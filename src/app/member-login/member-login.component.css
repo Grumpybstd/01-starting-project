@@ -1,43 +1,15 @@
-/* p {
-  margin: 0;
-  font-size: 1rem;
-  text-wrap: balance;
-    color:  #dd984e;
-    background-color: #524133;
-    opacity: 1.0;
-}
-h1 {
-  font-size: 25rem;
-  margin: 0;
-  padding: 0;
-  color: #dd984e;
-  position: relative;
-  background-color: #524133;
-opacity: 1.0;
-}
-h3 {
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  color: #dd984e;
-  position: relative;
-  background-color: #524133;
-opacity: 1.0;
-} */
 
 * {
   box-sizing: border-box;
 }
 
-/* body {
-  margin: 0;
-  font-family: "Lato", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#d0d6d9, #b1b4ba);
-  color: #d9e2f1;
-  min-height: 100vh;
-} */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+
+}
 
 header {
   margin: 2rem 0;
@@ -61,19 +33,29 @@ header img {
   letter-spacing: 0.2rem;
   color: #524133;;
 } */
+ h2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin:0rem;
+  padding: 0rem;
+  text-align:center;
+  
+ }
 
 form {
-  width: 90%;
-  max-width: 40rem;
-  margin: 3rem auto;
-  padding: 2rem;
+  /* width: 90%; */
+  max-width: 100%;
+  margin: 0 2rem;
+  padding: 5rem;
   background: linear-gradient(180deg, #00282e, #00282e);
   border-radius: 8px;
   box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
 }
 
-.control,
-fieldset {
+.control {
   margin: 0.5rem 0;
 }
 
@@ -83,7 +65,7 @@ fieldset {
 
 .control label {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-bottom: 0.2rem;
   color: #049bb3;
   text-transform: uppercase;
@@ -100,6 +82,8 @@ textarea {
   width: 100%;
   max-width: 100%;
   resize: vertical;
+
+
 }
 
 .control input {
@@ -110,11 +94,11 @@ textarea {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #758a8a;
-  background-color: #e4e9bd;
+  background-color: #f7f7f3;
   color: #142020;
 }
 
-.control select {
+/* .control select {
   display: block;
   width: 100%;
   max-width: 15rem;
@@ -124,18 +108,18 @@ textarea {
   border: 1px solid #758a8a;
   background-color: #869999;
   color: #142020;
-}
+} */
 
-.control:has(input[type="checkbox"]) {
+/* .control:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
-}
+} */
 
-.control:has(input[type="checkbox"]) label {
+/* .control:has(input[type="checkbox"]) label {
   margin: 0;
-}
+} */
 
-.control input[type="checkbox"] {
+/* .control input[type="checkbox"] {
   display: inline-block;
   width: auto;
   max-width: none;
@@ -144,9 +128,9 @@ textarea {
   border: none;
   background-color: transparent;
   color: #f1e2d9;
-}
+} */
 
-.control-error {
+/* .control-error {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -155,11 +139,11 @@ textarea {
   padding: 0.25rem 0 0 0;
   height: 1.5rem;
   margin-bottom: 1rem;
-}
+} */
 
-.control-error p {
+/* .control-error p {
   margin: 0;
-}
+} */
 
 .control-row {
   margin: 0.5rem 0;
@@ -186,7 +170,7 @@ hr {
 
 .button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: .75rem;
   border-radius: 4px;
   border: none;
   background-color: #034c58;
@@ -195,7 +179,7 @@ hr {
 }
 
 .button:hover,
-.button:focus {
+.button:focus{
   background-color: #524133;
 }
 
@@ -203,6 +187,11 @@ hr {
   background-color: transparent;
   color: #9cbaba;
 }
+button:disabled {
+  background-color: #449797;;
+  color: #a4d0d0;
+}
+
 
 .button-flat:hover,
 .button-flat:focus {
@@ -214,7 +203,59 @@ hr {
   color: #f98b75;
 }
 
+.control-row:has(.ng-invalid.ng-touched.ng-dirty) label {
+   color: #f98b75;
+}
+
 input.ng-invalid.ng-touched.ng-dirty {
-  background-color: #fbdcd6;
+  background-color: #ce9a47;
   border-color: #f84e2c;
 }
+@media (max-width: 768px) {
+
+  form {
+  /* width: 90%; */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+}
+
+
+
+/* body {
+  margin: 0;
+  font-family: "Lato", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#d0d6d9, #b1b4ba);
+  color: #d9e2f1;
+  min-height: 100vh;
+} */
+
+/* p {
+  margin: 0;
+  font-size: 1rem;
+  text-wrap: balance;
+    color:  #dd984e;
+    background-color: #524133;
+    opacity: 1.0;
+}
+h1 {
+  font-size: 25rem;
+  margin: 0;
+  padding: 0;
+  color: #dd984e;
+  position: relative;
+  background-color: #524133;
+opacity: 1.0;
+}
+h3 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #dd984e;
+  position: relative;
+  background-color: #524133;
+opacity: 1.0;
+} */
