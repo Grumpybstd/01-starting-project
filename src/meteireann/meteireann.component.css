@@ -1,0 +1,53 @@
+.weatherContainer{
+margin:0 auto;
+padding: 1rem;
+max-width:90%;
+display:flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: top;
+
+/* justify-items: center;
+align-items:center;
+align-content: center; */
+
+
+   /* width: 400px;
+   height: 450px; */
+   /* display:flex;
+   flex-direction: row; */
+
+}
+iframe {
+    /* flex:100%; */
+    /* width:80%;
+    height:80%; */
+    max-width: 100%;
+    width: 450px;
+    height: 410px; 
+    padding:0;
+    margin:0;
+
+}
+/* .met1 {
+        width: 650px;
+        height: 400px;
+    } */
+@media (max-width: 768px) {
+    .weatherContainer{
+        flex-direction: column;
+        max-width: 90%;
+        height:100%;
+    }
+    .met1 {
+        width: 350px;
+        height: 200px;
+    }
+/*   
+iframe {
+    max-width: 100%;
+    width: 350px;
+    height: 400px;
+} */
+
+}

@@ -1,0 +1,52 @@
+.gallerycontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.galleryitem {
+   max-width: 480px;
+   max-height: 272px;
+    
+}
+
+video {
+    max-width: 480px;
+    max-height: 272px;
+    
+}
+iframe {
+    width: 480px;
+    height: 272px;
+}
+h4 {
+  font-size: 0.75rem;
+  color: #049bb3;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+    .gallerycontainer{
+        flex-direction: row;
+    }
+    galleryitem {
+   max-width: 280px;
+   max-height: 172px;
+    
+}
+    video {
+    max-width: 280px;
+    max-height: 172px;
+    
+}
+iframe {
+    width: 280px;
+    height: 172px;
+}
+
+
+
+}
+     

@@ -1,0 +1,27 @@
+.control {
+    display:block;
+
+}
+.tidescontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+    
+}
+.tideItem{
+    flex-wrap: nowrap;
+}
+label {
+    display: block;
+  font-size: 0.6rem;
+  margin-bottom: 0.2rem;
+  color: #049bb3;
+  text-transform: uppercase;
+  font-weight: bold;
+}
