@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="container-mobilemenu navbar-flex">
+    <div class="container-menu">
+      <ul class="main-menu-list">
+        @for (menuItem of menu; track menuItem.id) {
+        <li>
+          <app-menu-item [user]="menuItem" />
+        </li>
+        }
+      </ul>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+        <h5>Click to expand and collapse Menu</h5>
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      <div class="mobile-menu-items" (click)="toggleMobileMenu()">
+        <ul class="mobile-menu-list">
+          @for (menuItem of menu; track menuItem.id) {
+          <li>
+            <app-menu-item [user]="menuItem" />
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

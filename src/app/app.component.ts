@@ -5,6 +5,7 @@ import { UsersComponent } from './users/users.component';
 import { RouterOutlet } from '@angular/router';
 import { AudioComponentComponent } from './shared/shared/audio.component/audio.component.component';
 import { MenuComponent } from './menu/menu.component';
+import { MobilemenuComponent } from './mobilemenu/mobilemenu.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { MenuComponent } from './menu/menu.component';
     RouterOutlet,
     AudioComponentComponent,
     MenuComponent,
+    MobilemenuComponent,
   ],
 })
 export class AppComponent {}

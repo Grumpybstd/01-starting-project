@@ -3,12 +3,32 @@
   box-sizing: border-box;
   
 }
+.header-container, .header-item1, .header-item2, .header-item3,.main-section {
+  background-color: #00282e;
 
+}
 
+a, menu a {
+  color: #049bb3;
+  /* color:#09cdeb; */
+  background-color: #00282e;
+  text-decoration:none ;
+}
+
+a:hover,
+a:active,
+.selected {
+  background-color: #08424b;
+  color: #1ddbf8;
+}
+/* menu a {
+  color: #049bb3;
+  background-color: #00282e;
+} */
 
 body {
   font-family: "Poppins", sans-serif;
-  color: aqua;
+  color: #049bb3;
    background-image: url("../public/coolbackgrounds-unsplash-bean.jpg");
    height: 100%;
    /* background: radial-gradient(circle at top left, #181023, #0b0519);
@@ -19,31 +39,19 @@ body {
   /* background-color: #36b304; */
 } 
 
-a {
-  color: #049bb3;
-  /* color:#09cdeb; */
-  background-color: #00282e;
-  text-decoration:none ;
-}
-a:hover,
-a:active,
-.selected {
-  background-color: #08424b;
-  color: #1ddbf8;
+#landing-action1, #landing-action2 {
+
+  color: #022d35;
 }
 
-#tasks{
-  background-color: #033b43;
-  
-}
+
 h1 {
   font-size: 25rem;
   margin: 0;
   padding: 0;
-  color: #049bb3;
   position: relative;
   /* background-color: #524133; */
-opacity: 1.0;
+  opacity: 1.0;
 }
 
 h2 {
@@ -51,31 +59,27 @@ h2 {
   font-size: .9rem;
   width: 100%;
   text-wrap: balance;
-  color: #049bb3;
+  
 }
 h3 {
   font-size: 1rem;
   margin: 0;
   padding: 0;
-  color: #049bb3;
   position: relative;
   /* background-color: #524133; */
  
 }
-
-menu a {
+h1, h2, h3 {
   color: #049bb3;
-  background-color: #00282e;
-
 }
+
+
 p {
   margin: 0;
   font-size: 1rem;
   text-wrap: balance;
     color: #049bb3;
     /* background-color: #524133; */
-
-  color: #049bb3;
 }
 @media (max-width: 768px) {
   main {

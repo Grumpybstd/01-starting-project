@@ -1,0 +1,166 @@
+.container-menu {
+  /* display: grid;
+  grid-auto-flow: row; */
+  /* max-width: 80%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+ 
+.container-mobilemenu {
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+  margin:0;
+  padding:0;
+}
+.navbar {
+  /* background:lightblue; */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 60px;
+
+}
+.navbar-flex{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+}
+i {
+  color: #022b2b;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+.navbar .main-menu-list {
+  display: flex;
+  gap: 0.5rem;
+  margin:.5rem;
+  
+}
+/* ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* justify-items: center; */
+  /* flex-wrap: wrap;
+  gap: 0.25rem;
+  overflow:auto;
+  margin: 5px;
+  padding:0;
+} */ 
+
+/* mobile menu */
+.navbar .mobile-menu {
+  display: none;
+}
+.navbar .mobile-menu-items {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  justify-items: right;
+  width: 50%;
+  height:50%;
+  top:115px;
+  bottom: 0;
+  left: 13rem;
+  
+  background: rgba(154,192,204,0.5);
+  /* text-align: center ; */
+  transition: transform 0.3s ease;
+  transform: translate(200%);
+  z-index: 1000;
+  opacity: 1.0
+}
+
+.navbar .mobile-menu-list {
+  display:flex;
+  flex-direction: column;
+  
+   /* align-items:end; */
+  
+  /* padding-top: 50px; */
+  gap: 1.125rem;
+  font-size: 1.2rem;
+ 
+}
+.navbar .mobile-menu-toggle {
+display: flex;
+justify-content: right ;
+align-items: center;
+cursor: pointer;
+padding: 2px;
+}
+.navbar .mobile-menu-toggle h5{
+color:#022b2b;
+margin-right: 10px;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.navbar .mobile-menu-items.active {
+  transform: translateX(0);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .container-menu{
+    display: none;
+  }
+  .container-mobilemenu {
+
+  max-width: 1200px;
+
+}
+.navbar .mobile-menu{
+  /* background:lightblue; */
+  display:block;
+  padding: 0;
+  height: 35px;
+
+} 
+/* .navbar-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+} */
+
+.navbar .main-menu {
+  display: flex;
+
+}
+.navbar {
+  /* background:lightblue; */
+  padding: 0;
+  height: 35px;
+
+}
+
+
+
+  /* ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+   */
+}
+  

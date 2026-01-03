@@ -3,6 +3,7 @@ import {
   Component,
   DestroyRef,
   inject,
+  input,
   viewChild,
 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -19,6 +20,7 @@ import { Router } from '@angular/router';
   styleUrl: './member-login.component.css',
 })
 export class MemberLoginComponent {
+  userId = input.required<string>(); // this will bind to the userId route parameter to the local userId property because of the input decorator withComponentInputBinding
   isloginMode = true;
   isLoading = false;
   responseErrorMsg: string = '';
@@ -87,10 +89,16 @@ export class MemberLoginComponent {
       if (this.isloginMode) {
         this.authService.signin(enteredEmail, enteredPassword).subscribe({
           next: (responseData) => {
-            console.log('Logged in User data : ');
+            console.log('User from userId in Route : ');
+            console.log(this.userId());
+            console.log(
+              'Logged in User data from AuthService in Member Login : '
+            );
             console.log(responseData);
             this.isLoading = false;
-            this.router.navigate(['/users/:userId/memberlogin/member']);
+            this.router.navigate([
+              '/users/' + this.userId() + '/memberlogin/member',
+            ]);
           },
           error: (errorMsg) => {
             console.log('error data : ');
@@ -103,10 +111,12 @@ export class MemberLoginComponent {
         //N.B. Need to update deprecated subscribe approach below
         this.authService.signup(enteredEmail, enteredPassword).subscribe({
           next: (responseData) => {
-            console.log('logged in User data : ');
+            console.log('User from userId in Route : ');
+            console.log(this.userId());
+            console.log('user signed up response request data : ');
             console.log(responseData);
             this.isLoading = false;
-            this.router.navigate(['/users/:userId/home']);
+            this.router.navigate(['/users/' + this.userId() + '/home']);
           },
           error: (errorMsg) => {
             console.log('error data : ');

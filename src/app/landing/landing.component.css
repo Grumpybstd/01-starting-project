@@ -26,7 +26,7 @@ h4{
   margin:0 auto;
   padding:0;
   background-color: none;
-    opacity: 0.55;
+  opacity: 0.55;
 }
   video {
   /* border: 2px solid #0b4104; */
@@ -58,7 +58,7 @@ h4{
   padding: 0;
   font-size: 1.9rem;
   width: 100%;
-  color: #034c57;
+  
   
 }
 #onoff {
@@ -69,11 +69,18 @@ h4{
   color: #034c57;
   
 }
- #action {
+ #landing-action1 {
   margin: 1rem;
   font-size: 1.9rem;
   width: 100%;
-  color: #022d35;
+  /* color: #022d35; */
+  
+}
+#landing-action2 {
+  margin-top: 2rem;
+  font-size: 1.9rem;
+  width: 100%;
+  /* color: #022d35; */
   
 }
 figure{
@@ -99,8 +106,8 @@ text-align: center;
   color: #034c57;
   
 }
- #action {
-  margin: 1rem;
+ #landing-action1, #landing-action2 {
+  margin-top: 2rem;
   font-size: 1.25rem;
   width: 100%;
   color: #022d35;

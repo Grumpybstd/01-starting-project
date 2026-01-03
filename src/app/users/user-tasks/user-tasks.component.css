@@ -76,14 +76,22 @@ menu a {
   gap:1rem;
 }
 
+/* a:hover,
+a:active,
+.selected {
+  background-color: #4c311b;
+  color: #4c311b;
+} */
 
-menu a:hover,
-menu a:active {
+
+/* menu a:hover,
+menu a:active
+.selected   .active {
 
   background-color: #08424b;
   color: #1ddbf8;
 
-}
+} */
 
 /* ul {
   list-style: none;

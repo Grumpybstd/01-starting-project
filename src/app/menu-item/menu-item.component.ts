@@ -2,11 +2,12 @@ import { Component, computed, input, OnInit } from '@angular/core';
 import { User } from '../users/user/user.model';
 import { MenuItem } from './menu.model';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CdkAutofill } from '@angular/cdk/text-field';
 
 @Component({
   selector: 'app-menu-item',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, CdkAutofill],
   templateUrl: './menu-item.component.html',
   styleUrl: './menu-item.component.css',
 })

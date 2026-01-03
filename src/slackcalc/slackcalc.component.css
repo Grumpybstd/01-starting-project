@@ -7,6 +7,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
 .calculator {
     display: flex;
     flex-direction: column;

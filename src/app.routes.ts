@@ -20,6 +20,8 @@ import { WeatherComponent } from './app/weather/weather.component';
 import { MemberComponent } from './app/member/member.component';
 import { MeteireannComponent } from './meteireann/meteireann.component';
 import { SlackcalcComponent } from './slackcalc/slackcalc.component';
+import { MembertrainingComponent } from './app/membertraining/membertraining.component';
+import { WindyappComponent } from './app/windyapp/windyapp.component';
 
 export const routes: Routes = [
   {
@@ -230,6 +232,11 @@ export const routes: Routes = [
         component: MemberComponent,
       },
       {
+        path: 'membertraining',
+        component: MembertrainingComponent,
+      },
+
+      {
         path: 'kish-photos',
         component: KishphotosComponent,
       },
@@ -282,6 +289,10 @@ export const routes: Routes = [
       {
         path: 'metEireann',
         component: MeteireannComponent,
+      },
+      {
+        path: 'windyapp',
+        component: WindyappComponent,
       },
       {
         path: 'windy',

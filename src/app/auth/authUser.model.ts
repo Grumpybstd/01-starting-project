@@ -6,11 +6,22 @@ export class AuthUser {
     private _tokenExpirationDate: Date //private because can only access in here through a getter see below
   ) {}
 
+  private _isAuthenticated: boolean = false;
+
   get token() {
     // if the token is expired or is less than the current date/timestamp (therefore in the past and expired)
     if (!this._tokenExpirationDate || new Date() > this._tokenExpirationDate) {
+      this._isAuthenticated = false;
       return null; //even though we may have a token - an expired token
     }
+
     return this._token;
+  }
+
+  public get userIsAuthenticated(): boolean {
+    return this._isAuthenticated;
+  }
+  public set userIsAuthenticated(value: boolean) {
+    this._isAuthenticated = value;
   }
 }

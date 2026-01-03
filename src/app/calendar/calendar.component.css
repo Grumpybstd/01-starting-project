@@ -32,6 +32,9 @@ button[mat-raised-button] {
  
   
 }
+h2 {
+  font-size: .7rem;
+}
 
 /* .flex-container {
   display: flex;

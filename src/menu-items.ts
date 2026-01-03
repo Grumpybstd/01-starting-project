@@ -170,6 +170,11 @@ export const MENU_ITEMS: MenuItem[] = [
     submenu: [
       {
         isActive: true,
+        subMenuName: 'Windy.app',
+        subMenuRoute: 'windyapp',
+      },
+      {
+        isActive: true,
         subMenuName: 'Met Eireann',
         subMenuRoute: 'metEireann',
       },
@@ -199,8 +204,13 @@ export const MENU_ITEMS: MenuItem[] = [
       },
       {
         isActive: true,
-        subMenuName: 'Members Training',
-        subMenuRoute: 'membersRoute2',
+        subMenuName: 'Member Training',
+        subMenuRoute: 'membertraininginactive',
+      },
+      {
+        isActive: true,
+        subMenuName: 'Member Area',
+        subMenuRoute: 'member',
       },
     ],
   },

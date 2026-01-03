@@ -95,7 +95,9 @@ font-size:x-small;
 
 @media(max-width:768px) {
   .container{
-    flex-direction: column;
+    /* flex-direction: column; */
+    display:inline-grid;
+    justify-items: center;
   }
 
   .container div {
@@ -106,6 +108,10 @@ font-size:x-small;
 li {
 color: #049bb3;
 font-size: small;
+}
+figure{
+  margin:0 auto;
+
 }
 
 }
