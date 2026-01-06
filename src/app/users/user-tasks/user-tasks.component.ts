@@ -79,6 +79,10 @@ export class UserTasksComponent implements OnInit {
       console.log('sub-menu item: ' + item.subMenuName);
     }
   }
+  onLogout() {
+    console.log('Logout clicked in UserTasksComponent');
+    this.authService.signout();
+  }
 }
 // N.B. the userId property will be populated based on the route parameter because of the input decorator and withComponentInputBinding function in the router provider
 // N.B. we could have also used ActivatedRoute to get the route parameter but this is a more modern approach

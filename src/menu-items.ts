@@ -199,18 +199,13 @@ export const MENU_ITEMS: MenuItem[] = [
     submenu: [
       {
         isActive: true,
-        subMenuName: 'Logout',
-        subMenuRoute: 'membersRoute1',
-      },
-      {
-        isActive: true,
-        subMenuName: 'Member Training',
-        subMenuRoute: 'membertraininginactive',
-      },
-      {
-        isActive: true,
-        subMenuName: 'Member Area',
+        subMenuName: 'General Membership Area',
         subMenuRoute: 'member',
+      },
+      {
+        isActive: true,
+        subMenuName: 'Individual Member',
+        subMenuRoute: 'membertraining',
       },
     ],
   },

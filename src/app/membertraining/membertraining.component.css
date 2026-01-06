@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+p {
+    width:100%;
+}
+li {
+color: #049bb3;
+font-size: medium;
+}
+ /* h5 {
+  text-align: center;
+  font-size: .75rem;
+  margin: 0;
+  padding:0;
+  color: #049bb3;
+ } */
+.control label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  color: #cddadc;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+textarea {
+  font: inherit;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #758a8a;
+  background-color: #aecbcf;
+  color: #142020;
+  width: 100%;
+  max-width: 100%;
+  resize: vertical;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #034c58;
+  color: #049bb3;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #524133;
+}
+
+.button-flat {
+  background-color: transparent;
+  color: #9cbaba;
+}
+
+.button-flat:hover,
+.button-flat:focus {
+  background-color: transparent;
+  color: #90d3d3;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+img {
+  width: 12rem;
+  height: 9rem;
+  /* position: relative; */
+  
+  /* border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px; */
+ 
+}
+figcaption { 
+font-size:x-small;
+
+}
+.control label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  color: #049bb3;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media(max-width:768px) {
+  .container{
+    /* flex-direction: column; */
+    display:inline-grid;
+    justify-items: center;
+  }
+
+  .container div {
+  margin: 8px;
+  padding: 3px;
+  font-size: 30px;
+}
+li {
+color: #049bb3;
+font-size: small;
+}
+figure{
+  margin:0 auto;
+
+}
+
+}

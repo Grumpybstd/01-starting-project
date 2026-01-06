@@ -22,6 +22,7 @@ import { MeteireannComponent } from './meteireann/meteireann.component';
 import { SlackcalcComponent } from './slackcalc/slackcalc.component';
 import { MembertrainingComponent } from './app/membertraining/membertraining.component';
 import { WindyappComponent } from './app/windyapp/windyapp.component';
+import { AuthguardServiceComponent } from './app/auth/authguard-service/authguard-service.component';
 
 export const routes: Routes = [
   {
@@ -229,10 +230,12 @@ export const routes: Routes = [
       },
       {
         path: 'member',
+        canActivate: [AuthguardServiceComponent],
         component: MemberComponent,
       },
       {
         path: 'membertraining',
+        canActivate: [AuthguardServiceComponent],
         component: MembertrainingComponent,
       },
 
@@ -305,29 +308,31 @@ export const routes: Routes = [
       },
     ],
   },
-  {
-    path: 'users/:userId/memberlogin',
-    component: UserTasksComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'member',
-        pathMatch: 'prefix', //prefix or full - prefix =
-      },
-      {
-        path: 'member',
-        component: MemberComponent,
-      },
-      {
-        path: 'kish-photos',
-        component: KishphotosComponent,
-      },
-      {
-        path: 'gallery',
-        component: GalleryComponent,
-      },
-    ],
-  },
+  // {
+  //   path: 'users/:userId/memberlogin',
+
+  //   component: UserTasksComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       redirectTo: 'member',
+  //       pathMatch: 'prefix', //prefix or full - prefix =
+  //     },
+  //     {
+  //       path: 'member',
+  //       canActivate: [AuthguardServiceComponent],
+  //       component: MemberComponent,
+  //     },
+  //     {
+  //       path: 'kish-photos',
+  //       component: KishphotosComponent,
+  //     },
+  //     {
+  //       path: 'gallery',
+  //       component: GalleryComponent,
+  //     },
+  //   ],
+  // },
   {
     path: '**',
     component: NotFoundComponent,

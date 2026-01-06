@@ -20,6 +20,7 @@ interface AuthResponseData {
 })
 export class AuthService {
   isAuthenticated = false;
+  loggedInUser!: AuthUser;
   //Subject to allow user object to be emitted and Observable that components can subscribe to get the user Object
   private userLoginSubject = new Subject<AuthUser>();
   userLoginObservable = this.userLoginSubject.asObservable();
@@ -45,14 +46,19 @@ export class AuthService {
           const expirationDate = new Date( //xpiration date in miliseconds converted to date by new Date()
             new Date().getTime() + +resData.expiresIn * 1000
           );
+
           const authUser = new AuthUser(
             resData.email,
             resData.localId,
             resData.idToken,
             expirationDate
           );
+          authUser.userIsAuthenticated = true;
+          this.loggedInUser = authUser;
+          //this.isAuthenticated = true;
+          console.log('Auth Service isUserAuthenticated before emit: ');
 
-          this.userLoginSubject.next(authUser); //now use Subject to emit newly signed in user
+          this.userLoginSubject.next(this.loggedInUser); //now use Subject to emit newly signed in user
         })
       );
   }
@@ -84,9 +90,12 @@ export class AuthService {
           );
           //this.isAuthenticated = true;
           authUser.userIsAuthenticated = true;
+          this.loggedInUser = authUser;
           console.log('Auth Service isUserAuthenticated before emit: ');
-          console.log(authUser.userIsAuthenticated);
-          this.userLoginSubject.next(authUser); //now use Subject to emit newly signed in user
+          console.log(this.loggedInUser.userIsAuthenticated);
+          console.log('Auth Service emitting this loggedInUser: ');
+          console.log(this.loggedInUser);
+          this.userLoginSubject.next(this.loggedInUser); //now use Subject to emit newly signed in user
         })
       );
   }
@@ -119,6 +128,11 @@ export class AuthService {
     return throwError(() => new Error(errorMessage));
   }
 
+  signout() {
+    this.isAuthenticated = false;
+    console.log('User signed out from AuthService.');
+    //this.userLoginSubject.next(null); //emit null to indicate no user is logged in
+  }
   // auth = getAuth();
   // signOut = () => {
   //   signOut(this.auth)

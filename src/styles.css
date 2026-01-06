@@ -14,6 +14,12 @@ a, menu a {
   background-color: #00282e;
   text-decoration:none ;
 }
+menu a {
+  color: #26a4b7;
+  /* color:#09cdeb; */
+  background-color: #00282e;
+  text-decoration:none ;
+}
 
 a:hover,
 a:active,

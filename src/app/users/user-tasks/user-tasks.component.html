@@ -3,6 +3,7 @@
     <header>
       <menu class="">
         <ul>
+          <li><a href="" (click)="onLogout()">Logout</a></li>
           @for (item of menuItems().submenu; track $index) {
           <li>
             <a [routerLink]="[item.subMenuRoute]">{{ item.subMenuName }}</a>
