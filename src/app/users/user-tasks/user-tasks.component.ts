@@ -40,18 +40,27 @@ export class UserTasksComponent implements OnInit {
     private authService: AuthService // private authUser: Subscription
   ) {}
   ngOnInit() {
-    this.authService.userLoginObservable.subscribe((user) => {
-      if (!user) {
-        this.isAuthenticated = false;
-      } else {
-        this.isAuthenticated = true;
-        this.authUser = user;
-        console.log('Logged in user from userLoginObservable : ');
-        console.log(user);
-      }
+    // console.log('UserTasksComponent ngOnInit - checking authentication');
+    // this.authService.userLoginObservable.subscribe((user) => {
+    //   console.log('UserTasksComponent - user from LoginObservable: ' + user);
+    //   if (!user) {
+    //     this.isAuthenticated = false;
+    //     console.log(
+    //       'Not IsAuthenticted from LoginObservable from app-user-tasks  : ' +
+    //         this.isAuthenticated
+    //     );
+    //   } else {
+    //     this.isAuthenticated = true;
+    //     this.authUser = user;
+    //     console.log(
+    //       'Logged in user using LoginObservable from is true - app-user-tasks isAuthenticated : ' +
+    //         this.isAuthenticated
+    //     );
+    //     // console.log(user.userIsAuthenticated);
+    //   }
 
-      // this.isAuthenticated = !!user ? false : true;
-    });
+    //   // this.isAuthenticated = !!user ? false : true;
+    // });
     // Just to demonstrate that we can also get the route parameter using ActivatedRoute
     //console.log(this.activatedRoute); // shows the ActivatedRoute object which we can subscrip to paramMap observable to get the route parameters
     // console.log(
@@ -75,9 +84,9 @@ export class UserTasksComponent implements OnInit {
       return;
     }
     const subMenu = menu.submenu;
-    for (const item of this.menuItems().submenu) {
-      console.log('sub-menu item: ' + item.subMenuName);
-    }
+    // for (const item of this.menuItems().submenu) {
+    //   console.log('sub-menu item: ' + item.subMenuName);
+    // }
   }
   onLogout() {
     console.log('Logout clicked in UserTasksComponent');

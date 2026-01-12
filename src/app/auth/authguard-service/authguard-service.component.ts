@@ -6,13 +6,14 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { AuthService } from '../auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthguardServiceComponent implements CanActivate {
+  routeActivated = false;
   constructor(private authService: AuthService, private router: Router) {
     console.log('AuthguardServiceComponent constructor called');
   }
@@ -21,22 +22,40 @@ export class AuthguardServiceComponent implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    this.authService.userLoginObservable.subscribe((user) => {
-      if (!user) {
-        this.authService.isAuthenticated = false;
+    return this.authService.userLoginSubject.pipe(
+      map((user) => {
         console.log(
-          'AuthguardServiceComponent - user not logged in, navigating to login'
+          'AuthguardServiceComponent - canActivate called with user: '
         );
-        this.router.navigate(['/login']);
-      } else {
-        this.authService.isAuthenticated = true;
-      }
-
-      // this.isAuthenticated = !!user ? false : true;
-    });
-    console.log('Returning AuthguardService canActivate isAuthenticated: ');
-    console.log(this.authService.isAuthenticated);
-    return this.authService.isAuthenticated;
-    // return false;
+        console.log(user);
+        return !!user; // return true if user exists, false otherwise
+      })
+    );
   }
 }
+// canActivate(
+//   route: ActivatedRouteSnapshot,
+//   state: RouterStateSnapshot
+// ): Observable<boolean> | Promise<boolean> | boolean {
+//   this.authService.userLoginObservable.subscribe((user) => {
+//     console.log('AuthguardServiceComponent - canActivate called with user: ');
+//     console.log(user.userIsAuthenticated);
+//     if (!user.userIsAuthenticated) {
+//       console.log(
+//         'AuthguardServiceComponent - user not logged in, navigating to login'
+//       );
+//       this.routeActivated = false;
+//       this.router.navigate(['/']);
+//     } else {
+//       console.log('Setting AuthguardService isAuthenticated: True ');
+//       this.routeActivated = true;
+//     }
+
+//     // this.isAuthenticated = !!user ? false : true;
+//   });
+//   // console.log('Returning AuthguardService isAuthenticated: ');
+//   // console.log(this.authService.isAuthenticated);
+//   console.log('returning this.routeActivated: ' + this.routeActivated);
+//   return this.routeActivated;
+//   return false;
+// }

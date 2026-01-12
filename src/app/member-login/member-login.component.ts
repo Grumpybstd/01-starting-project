@@ -63,14 +63,14 @@ export class MemberLoginComponent {
   }
 
   onSubmit(formData: NgForm) {
-    console.log('form submission :');
-    console.log(formData);
+    // console.log('form submission :');
+    // console.log(formData);
     if (!formData.valid) {
       return;
     } else {
       const enteredEmail = formData.form.value.email;
       const enteredPassword = formData.form.value.password;
-      console.log('form entered data :' + enteredEmail + ' ' + enteredPassword);
+      console.log('Login request :' + enteredEmail + ' ' + enteredPassword);
 
       //  (responseData) => {
       //       console.log('Logged in User data : ');
@@ -84,29 +84,18 @@ export class MemberLoginComponent {
       //       this.responseErrorMsg = errorMsg;
       //       this.isLoading = false;
       //     }
-
       this.isLoading = true;
       if (this.isloginMode) {
-        this.authService.signin(enteredEmail, enteredPassword).subscribe({
-          next: (responseData) => {
-            console.log('User from userId in Route : ');
-            console.log(this.userId());
-            console.log(
-              'Logged in User data from AuthService in Member Login : '
-            );
-            console.log(responseData);
+        this.authService
+          .signin(enteredEmail, enteredPassword)
+          .subscribe((resData) => {
+            console.log('signin response data : ');
+            console.log(resData);
             this.isLoading = false;
             this.router.navigate([
               '/users/' + this.userId() + '/memberlogin/member',
             ]);
-          },
-          error: (errorMsg) => {
-            console.log('error data : ');
-            console.log(errorMsg);
-            this.responseErrorMsg = errorMsg;
-            this.isLoading = false;
-          },
-        });
+          });
       } else {
         //N.B. Need to update deprecated subscribe approach below
         this.authService.signup(enteredEmail, enteredPassword).subscribe({
@@ -135,3 +124,22 @@ export class MemberLoginComponent {
     console.log('isLoginMode :' + this.isloginMode);
   }
 }
+//next: (responseData) => {
+//   // console.log('User from userId in Route : ' + this.userId());
+//   // console.log(
+//   //   'Logged in User data from AuthService in Member Login : '
+//   // );
+//   console.log(
+//     'Member LoginResponse data email: ' + responseData.email
+//   );
+//   this.isLoading = false;
+//   this.router.navigate([
+//     '/users/' + this.userId() + '/memberlogin/member',
+//   ]);
+// },
+// error: (errorMsg) => {
+//   console.log('error data : ');
+//   console.log(errorMsg);
+//   this.responseErrorMsg = errorMsg;
+//   this.isLoading = false;
+// },

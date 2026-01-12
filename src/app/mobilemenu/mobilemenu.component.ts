@@ -20,7 +20,6 @@ export class MobilemenuComponent implements OnInit {
   constructor() {}
 
   toggleMobileMenu() {
-    console.log('Toggle menu clicked');
     const mobileMenuElement = document.querySelector('.mobile-menu-items');
     mobileMenuElement?.classList.toggle('active');
   }

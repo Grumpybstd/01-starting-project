@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, tap } from 'rxjs/operators';
-import { Observable, Subject, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
 import { AuthUser } from './authUser.model';
 import { getAuth, signOut } from 'firebase/auth';
 
@@ -22,8 +22,12 @@ export class AuthService {
   isAuthenticated = false;
   loggedInUser!: AuthUser;
   //Subject to allow user object to be emitted and Observable that components can subscribe to get the user Object
-  private userLoginSubject = new Subject<AuthUser>();
+  userLoginSubject = new BehaviorSubject<AuthUser | null>(null);
+  userLoginObs = new Observable<AuthUser>();
   userLoginObservable = this.userLoginSubject.asObservable();
+  //expose as observable so components can only subscribe not emit
+  //Possibly use ReplaySubject if want new subscribers to get last emitted value automatically
+  //Note:Possibly use BehaviorSubject to hold current user state in conjunction with asObservable to expose to multiple subscribers
 
   constructor(private http: HttpClient) {}
 
@@ -58,7 +62,7 @@ export class AuthService {
           //this.isAuthenticated = true;
           console.log('Auth Service isUserAuthenticated before emit: ');
 
-          this.userLoginSubject.next(this.loggedInUser); //now use Subject to emit newly signed in user
+          this.userLoginSubject.next(authUser); //now use Subject to emit newly signed in user
         })
       );
   }
@@ -91,13 +95,22 @@ export class AuthService {
           //this.isAuthenticated = true;
           authUser.userIsAuthenticated = true;
           this.loggedInUser = authUser;
-          console.log('Auth Service isUserAuthenticated before emit: ');
-          console.log(this.loggedInUser.userIsAuthenticated);
+          // console.log(
+          //   'Auth Service isUserAuthenticated before emit: ' + authUser
+          // );
+          // console.log(this.loggedInUser.userIsAuthenticated);
           console.log('Auth Service emitting this loggedInUser: ');
-          console.log(this.loggedInUser);
-          this.userLoginSubject.next(this.loggedInUser); //now use Subject to emit newly signed in user
+          console.log(authUser);
+          // console.log(this.loggedInUser.email);
+          //return this.loggedInUser;
+          this.userLoginSubject.next(authUser);
         })
       );
+    //now use Subject to emit newly signed in user
+  }
+
+  public get authenticatedUser(): AuthUser {
+    return this.loggedInUser;
   }
 
   private handleError(errorRes: any): Observable<never> {

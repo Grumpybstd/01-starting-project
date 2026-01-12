@@ -123,6 +123,7 @@ menu a:active
     max-width: 100%;
     margin:0;
     padding:0;
+    margin-bottom: 1rem;
   }
   .flex-container-user {
   max-width: 100%;
