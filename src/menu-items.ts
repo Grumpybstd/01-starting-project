@@ -207,6 +207,11 @@ export const MENU_ITEMS: MenuItem[] = [
         subMenuName: 'Individual Member',
         subMenuRoute: 'membertraining',
       },
+      {
+        isActive: true,
+        subMenuName: 'Bubble Makers 2025',
+        subMenuRoute: 'our-training',
+      },
     ],
   },
 

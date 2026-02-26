@@ -35,14 +35,24 @@ a:active,
 body {
   font-family: "Poppins", sans-serif;
   color: #049bb3;
-   background-image: url("../public/coolbackgrounds-unsplash-bean.jpg");
-   height: 100%;
-   /* background: radial-gradient(circle at top left, #181023, #0b0519);
-  color: #c3b3d8; 
-   margin: 0;
-  padding: 0; 
-   */
-  /* background-color: #36b304; */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(40, 170, 170, 0.18) 0%,
+      rgba(40, 170, 170, 0.10) 35%,
+      rgba(0, 0, 0, 0.15) 70%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    url("../public/backgroundImage3.jpg") no-repeat center center fixed;
+   /* background-image: url("../public/backgroundImage2.jpg"); */
+   /* height: 100%; */
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 65%;
+    min-height: 100vh;
+    backdrop-filter: saturate(110%) brightness(105%);
+  
+  
 } 
 
 #landing-action1, #landing-action2 {
@@ -77,6 +87,7 @@ h3 {
 }
 h1, h2, h3 {
   color: #049bb3;
+  /* text-shadow: 0 2px 8px rgba(0, 40, 40, 0.35); */
 }
 
 
@@ -100,8 +111,12 @@ p {
   text-wrap: balance;
   color: #049bb3;
 }
-
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  margin-top: 5.0rem;
 }
-
-
-
+}

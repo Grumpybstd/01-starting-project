@@ -1,5 +1,11 @@
 <div class="login-container">
-  @if (!isLoading) {
+  @if(responseErrorMsg){
+  <div class="col-xs-12">
+    <div class="alert-danger">
+      <p>{{ responseErrorMsg }}</p>
+    </div>
+  </div>
+  } @if (!isLoading) {
   <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
     <h2>Member & Committee Area</h2>
     <br />

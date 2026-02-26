@@ -249,7 +249,8 @@ export const routes: Routes = [
       },
       {
         path: 'our-training',
-        component: KishphotosComponent,
+        canActivate: [AuthguardServiceComponent],
+        component: KishTrainingComponent,
       },
     ],
   },

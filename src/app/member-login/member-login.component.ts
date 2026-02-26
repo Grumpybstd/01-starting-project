@@ -71,31 +71,27 @@ export class MemberLoginComponent {
       const enteredEmail = formData.form.value.email;
       const enteredPassword = formData.form.value.password;
       console.log('Login request :' + enteredEmail + ' ' + enteredPassword);
-
-      //  (responseData) => {
-      //       console.log('Logged in User data : ');
-      //       console.log(responseData);
-      //       this.isLoading = false;
-      //       this.router.navigate(['/users/:userId/memberlogin/member']);
-      //     },
-      //     (errorMsg) => {
-      //       console.log('error data : ');
-      //       console.log(errorMsg);
-      //       this.responseErrorMsg = errorMsg;
-      //       this.isLoading = false;
-      //     }
       this.isLoading = true;
+
+      //Onsubmit either Login or Signup below
+      //N.B. Need to update deprecated subscribe approach below
       if (this.isloginMode) {
-        this.authService
-          .signin(enteredEmail, enteredPassword)
-          .subscribe((resData) => {
+        this.authService.signin(enteredEmail, enteredPassword).subscribe({
+          next: (resData) => {
             console.log('signin response data : ');
             console.log(resData);
             this.isLoading = false;
             this.router.navigate([
               '/users/' + this.userId() + '/memberlogin/member',
             ]);
-          });
+          },
+          error: (errorMsg) => {
+            console.log('error data : ');
+            console.log(errorMsg);
+            this.responseErrorMsg = errorMsg;
+            this.isLoading = false;
+          },
+        });
       } else {
         //N.B. Need to update deprecated subscribe approach below
         this.authService.signup(enteredEmail, enteredPassword).subscribe({

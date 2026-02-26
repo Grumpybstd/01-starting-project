@@ -2,6 +2,14 @@
     display:block;
 
 }
+.slackContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width:100%;
+}
 .tidescontainer{
     display: flex;
     flex-direction: row;
@@ -25,4 +33,57 @@ label {
   color: #049bb3;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.streamContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width:100%;
+}
+.streamItem {
+   max-width: 480px;
+   max-height: 272px;
+    
+}
+
+video {
+    max-width: 480px;
+    max-height: 272px;
+    
+}
+iframe {
+    width: 480px;
+    height: 272px;
+}
+h4 {
+  font-size: 0.75rem;
+  color: #049bb3;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+    .streamContainer{
+        flex-direction: row;
+    }
+    .streamItem {
+   max-width: 280px;
+   max-height: 172px;
+    
+}
+    video {
+    max-width: 280px;
+    max-height: 172px;
+    
+}
+iframe {
+    width: 280px;
+    height: 172px;
+}
+
+
+
 }

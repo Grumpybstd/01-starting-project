@@ -78,7 +78,7 @@ export class AuthService {
         }
       )
       .pipe(
-        catchError(this.handleError),
+        catchError(this.handleError), //this will return errormessage to member-login subscription or whichever called signin
         tap((resData) => {
           // if no error we will get back the AuthResponseData which can be used to create new user - note tap operator does not change the data but just runs code against it
           //gettime returns the number of miliseconds since time started to give current time then add resdata seconds converted to miliseconds to get expire time in the future
@@ -116,8 +116,10 @@ export class AuthService {
   private handleError(errorRes: any): Observable<never> {
     let errorMessage = 'An unknown error occurred!';
     if (!errorRes.error || !errorRes.error.error) {
-      return throwError(() => new Error(errorMessage));
+      return throwError(() => new Error(errorMessage)); //throws new observable error with that error message
     }
+    //this switch will fail if error does not have the format below as sent by firebase e.g. network failure error
+    //there see if statement above checking for one of two formats
     switch (errorRes.error.error.message) {
       case 'EMAIL_EXISTS':
         errorMessage = 'This email exists already';
