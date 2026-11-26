@@ -4,20 +4,28 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
+    width: 100%;
+    min-width: 0;
 }
 .galleryitem {
-   max-width: 480px;
+   flex: 0 1 480px;
+   min-width: 0;
+   max-width: 100%;
    max-height: 272px;
     
 }
 
 video {
+    display: block;
+    width: 100%;
     max-width: 480px;
     max-height: 272px;
     
 }
 iframe {
-    width: 480px;
+    display: block;
+    width: 100%;
+    max-width: 480px;
     height: 272px;
 }
 h4 {
@@ -30,23 +38,19 @@ h4 {
 @media (max-width: 768px) {
     .gallerycontainer{
         flex-direction: row;
+        gap: 1rem;
     }
-    galleryitem {
-   max-width: 280px;
-   max-height: 172px;
-    
-}
+    .galleryitem {
+        flex-basis: 100%;
+        max-width: 480px;
+    }
     video {
-    max-width: 280px;
-    max-height: 172px;
-    
-}
-iframe {
-    width: 280px;
-    height: 172px;
-}
-
-
+        max-height: none;
+    }
+    iframe {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
 
 }
      

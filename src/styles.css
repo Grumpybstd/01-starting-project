@@ -3,6 +3,14 @@
   box-sizing: border-box;
   
 }
+
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
 .header-container, .header-item1, .header-item2, .header-item3,.main-section {
   background-color: #00282e;
 
@@ -51,9 +59,16 @@ body {
   background-position: center 65%;
     min-height: 100vh;
     backdrop-filter: saturate(110%) brightness(105%);
+    overflow-x: clip;
   
   
 } 
+
+app-root {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
 
 #landing-action1, #landing-action2 {
 
@@ -78,7 +93,7 @@ h2 {
   
 }
 h3 {
-  font-size: 1rem;
+  font-size: .85rem;
   margin: 0;
   padding: 0;
   position: relative;
@@ -93,15 +108,26 @@ h1, h2, h3 {
 
 p {
   margin: 0;
-  font-size: 1rem;
+  font-size: .85rem;
   text-wrap: balance;
     color: #049bb3;
     /* background-color: #524133; */
 }
+li {
+  font-size: .85rem;
+}
+
 @media (max-width: 768px) {
+  body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
   main {
-    margin: 4rem auto;
-    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    overflow-x: clip;
   }
 
 .flex-item h2 {

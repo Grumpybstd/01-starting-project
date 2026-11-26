@@ -1,9 +1,18 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
 .root-container {
 
+  width: 100%;
   max-width: 1850px;
+  min-width: 0;
   margin: 0rem auto;
   padding:0;
   display: flex;
+  overflow:hidden;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap ;
@@ -15,8 +24,11 @@
   
 @media (max-width: 768px) {
   main {
+    width: 100%;
+    min-width: 0;
     margin: 0rem auto;
     display: flex;
+    overflow:hidden;
     flex-direction: column;
     justify-content: flex-start;
     justify-items: flex-start;

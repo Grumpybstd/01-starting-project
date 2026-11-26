@@ -23,6 +23,10 @@ import { SlackcalcComponent } from './slackcalc/slackcalc.component';
 import { MembertrainingComponent } from './app/membertraining/membertraining.component';
 import { WindyappComponent } from './app/windyapp/windyapp.component';
 import { AuthguardServiceComponent } from './app/auth/authguard-service/authguard-service.component';
+import { EntryLevelProgrammesComponent } from './app/entry-level-programmes/entry-level-programmes.component';
+import { AdvancedlProgrammesComponent } from './app/advancedl-programmes/advancedl-programmes.component';
+import { SearchRecoveryComponent } from './app/search-recovery/search-recovery.component';
+import { DiveSitesComponent } from './dive-sites/dive-sites.component';
 
 export const routes: Routes = [
   {
@@ -70,12 +74,16 @@ export const routes: Routes = [
         component: DivewithusComponent,
       },
       {
-        path: 'kish-photos',
-        component: KishphotosComponent,
+        path: 'entryLevelProgrammes',
+        component: EntryLevelProgrammesComponent,
       },
       {
-        path: 'gallery',
-        component: GalleryComponent,
+        path: 'advancedProgrammes',
+        component: AdvancedlProgrammesComponent,
+      },
+      {
+        path: 'searchRecovery',
+        component: SearchRecoveryComponent,
       },
       {
         path: 'who-we-are',
@@ -306,6 +314,10 @@ export const routes: Routes = [
       {
         path: 'slackcalc',
         component: SlackcalcComponent,
+      },
+      {
+        path: 'diveSites',
+        component: DiveSitesComponent,
       },
     ],
   },

@@ -84,13 +84,13 @@ export const MENU_ITEMS: MenuItem[] = [
       },
       {
         isActive: true,
-        subMenuName: 'Try Dive Details',
-        subMenuRoute: 'divewithUs',
+        subMenuName: 'Entry Level Programmes',
+        subMenuRoute: 'entryLevelProgrammes',
       },
       {
         isActive: true,
-        subMenuName: 'D1* D2** Programme Details',
-        subMenuRoute: 'divewithUs2',
+        subMenuName: 'Advanced Programmes',
+        subMenuRoute: 'advancedProgrammes',
       },
       // {
       //   isActive: true,
@@ -99,14 +99,19 @@ export const MENU_ITEMS: MenuItem[] = [
       // },
       {
         isActive: true,
-        subMenuName: 'Full Programme List',
-        subMenuRoute: 'divewithUs4',
+        subMenuName: 'Search & Rescue',
+        subMenuRoute: 'searchRecovery',
       },
       // {
       //   isActive: true,
       //   subMenuName: 'Crossover Programme (PADI,BSAC) ',
       //   subMenuRoute: 'divewithUs5',
       // },
+      {
+        isActive: true,
+        subMenuName: 'Women In Sport',
+        subMenuRoute: 'womenInSport',
+      },
       {
         isActive: true,
         subMenuName: 'Upcoming Schedule',
@@ -185,8 +190,13 @@ export const MENU_ITEMS: MenuItem[] = [
       },
       {
         isActive: true,
-        subMenuName: 'Tide Calculation',
+        subMenuName: 'Dive Planning',
         subMenuRoute: 'slackcalc',
+      },
+      {
+        isActive: true,
+        subMenuName: 'Dive Sites',
+        subMenuRoute: 'diveSites',
       },
     ],
   },
@@ -211,6 +221,11 @@ export const MENU_ITEMS: MenuItem[] = [
         isActive: true,
         subMenuName: 'Bubble Makers 2025',
         subMenuRoute: 'our-training',
+      },
+      {
+        isActive: true,
+        subMenuName: 'Logout',
+        subMenuRoute: 'logout',
       },
     ],
   },

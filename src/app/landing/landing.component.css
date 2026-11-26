@@ -16,7 +16,17 @@
   justify-content: center;
   flex-wrap:wrap;
   margin: 0 auto;
- 
+  
+} 
+.flex-item1 {
+  /* height: 105px; */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  margin: 0 auto;
+  color:rgb(216, 240, 240)
+  
 } 
 h2{
   margin:0 auto;
@@ -28,13 +38,27 @@ h4{
   background-color: none;
   opacity: 0.55;
 }
-  video {
+h5{
+  margin:0 auto;
+  padding:0;
+  color: #010c0e;
+  background-color: none;
+  opacity: 0.55;
+}
+.video-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-radius:50px;
+  overflow: hidden;
+  justify-content: center;}
+
+video {
   /* border: 2px solid #0b4104; */
-  border-top-left-radius: 50px;
+  /* border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  overflow: hidden;
+  border-bottom-left-radius: 50px; */
   width: 100%;
   height: 100%;
   justify-content: center ;
@@ -66,21 +90,43 @@ h4{
   padding: 0;
   font-size: .70rem;
   width: 100%;
-  color: #034c57;
+  /* color: #034c57; */
+  color: #aac1c5;
+  opacity: 0.55;
   
 }
  #landing-action1 {
   margin: 1rem;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   width: 100%;
-  /* color: #022d35; */
+  /* color: #ced7d8; */
   
 }
 #landing-action2 {
-  margin-top: 2rem;
-  font-size: 1.9rem;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
   width: 100%;
-  /* color: #022d35; */
+  /* color: #759fa7; */
+  /* opacity: 0.55; */
+  
+}
+
+#landing-action3 {
+  margin-top: 0rem;
+  font-size: 1.0rem;
+  width: 100%;
+  color: #aac1c5;
+  opacity: 0.55;
+  
+}
+#landing-action4 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  font-size: 1.0rem;
+  width: 100%;
+  color: #aac1c5;
+  opacity: 0.55;
   
 }
 figure{
@@ -106,10 +152,27 @@ text-align: center;
   color: #034c57;
   
 }
- #landing-action1, #landing-action2 {
-  margin-top: 2rem;
-  font-size: 1.25rem;
+ #landing-action1 {
+  margin-top: 1rem;
+  font-size: 1.75rem;
   width: 100%;
   color: #022d35;
+}
+#landing-action2 {
+  margin-top: 0rem;
+  margin-bottom: 1.0rem;
+  font-size: 1.0rem;
+  width: 100%;
+  /* color: #759fa7; */
+  /* opacity: 0.55; */
+  
+}
+#landing-action4 {
+  margin-top: .5rem;
+  margin-bottom: 1.0rem;
+  font-size: 1.0rem;
+  width: 100%;
+  color: #aac1c5;
+  opacity: 0.55; 
 }
 }

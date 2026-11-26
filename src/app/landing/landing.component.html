@@ -1,29 +1,37 @@
 <div class="flex-container">
   <div class="flex-item">
-    <h2 id="landing-action1">Kish SAC - Click Explore Enjoy</h2>
+    <h2 id="landing-action1">Welcome to Kish Sub Aqua</h2>
+  </div>
+  <div class="flex-item">
+    <h2 id="landing-action2">Click on the Menu to Explore - Enjoy!</h2>
   </div>
 
   <div class="flex-item">
     <figure>
-      <video
-        autoplay
-        [playsInline]="'playsinline'"
-        [muted]="'muted'"
-        [loop]="'loop'"
-      >
-        <source src="shark1.mp4" type="video/mp4" />
-      </video>
-      <figcaption>Kish 2025 - Azores Pico Island</figcaption>
+      <div class="video-container">
+        <video
+          autoplay
+          [playsInline]="'playsinline'"
+          [muted]="'muted'"
+          [loop]="'loop'"
+        >
+          <source src="shark1.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <br />
+      <figcaption id="landing-action3">
+        Shark Dance - Kish 2025 Azores Pico Island
+      </figcaption>
     </figure>
   </div>
   <div class="flex-item">
-    <h2 id="landing-action2">Really Explore - Contact Us!</h2>
+    <h2 id="landing-action4">Start your Journey- Contact Us!</h2>
   </div>
 
   <div class="flex-item" #audio>
     <app-audio />
   </div>
   <div class="flex-item">
-    <h4 id="onoff">Audio on/off</h4>
+    <h5 id="onoff">Audio on/off</h5>
   </div>
 </div>

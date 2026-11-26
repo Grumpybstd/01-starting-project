@@ -17,7 +17,7 @@ opacity: 1.0;
 }*/
 
 h3 {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   margin: 0;
   padding-bottom: 0rem;
 
@@ -41,7 +41,7 @@ h3 {
  p {
     max-width: 100%;
   margin: 0;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   text-wrap: balance;
     opacity: 1.0;
 } 
